@@ -13,14 +13,14 @@ A full-stack e-commerce pharmacy application that allows users to browse medicin
 ## 🛠️ Tech Stack
 
 ### Backend
-* **Node.js & Express.js:**
-* **MongoDB:**
-* **JWT (JSON Web Tokens):**
-* **bcryptjs:** 
+* **Node.js & Express.js**
+* **MongoDB**
+* **JWT (JSON Web Tokens)**
+* **bcryptjs** 
 
 ### Frontend
-* **HTML & CSS:** 
-* **JS:**
+* **HTML & CSS** 
+* **JS**
 
 ## ⚙️ Installation & Setup
 
