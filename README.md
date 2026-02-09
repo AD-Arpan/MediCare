@@ -4,26 +4,23 @@ A full-stack e-commerce pharmacy application that allows users to browse medicin
 
 ## 🚀 Features
 
-* **User Authentication:** Secure signup and login using JWT (JSON Web Tokens) and bcrypt for password hashing.
+* **User Authentication:** Secure signup and login using JWT and bcrypt for password hashing.
 * **Product Catalog:** Browse pharmaceutical products with categorization.
 * **Shopping Cart:** Add/remove items and calculate totals dynamically.
-* **Order Management:** Place orders and view order history (Backend implementation).
+* **Order Management:** Place orders and view order history .
 * **Responsive Design:** Fully responsive UI built with CSS3 and Vanilla JavaScript.
-* **Security:** Environment variable management for sensitive credentials.
 
 ## 🛠️ Tech Stack
 
 ### Backend
-* **Node.js & Express.js:** Server-side framework and API handling.
-* **MongoDB & Mongoose:** NoSQL database and object modeling.
-* **JWT (JSON Web Tokens):** Secure stateless authentication.
-* **bcryptjs:** Password encryption.
-* **dotenv:** Environment variable management.
+* **Node.js & Express.js:**
+* **MongoDB:**
+* **JWT (JSON Web Tokens):**
+* **bcryptjs:** 
 
 ### Frontend
-* **HTML5 & CSS3:** Semantic markup and custom styling.
-* **Vanilla JavaScript (ES6+):** DOM manipulation and API integration (Fetch API).
-* **Font Awesome:** Iconography.
+* **HTML & CSS:** 
+* **JS:**
 
 ## ⚙️ Installation & Setup
 
@@ -44,10 +41,6 @@ npm install
 This project uses environment variables to secure sensitive data (MongoDB URI, JWT Secret).
 
 Create a new file named `.env` in the root directory.
-
-Copy the contents of `.env.example` (or use the template below) into your new `.env` file.
-
-Replace the placeholder values with your actual credentials.
 
 Example `.env` file:
 ```env
