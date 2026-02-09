@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary - MediCare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-clinic-medical"></i>
+                <span>MediCare</span>
+            </div>
+            <div class="nav-buttons">
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order-summary">
+            <h1>Order Summary</h1>
+            <div class="order-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section class="payment-section">
+            <h2 class="payment-title">Payment Details</h2>
+            <div class="payment-content">
+                <div class="payment-row">
+                    <span>MRP Total</span>
+                    <span id="mrp-total">₹0.00</span>
+                </div>
+                <div class="payment-row">
+                    <span>Shipping Charges</span>
+                    <span id="shipping">₹0.00</span>
+                </div>
+                <div class="payment-row total-payable">
+                    <span>Total Payable</span>
+                    <span id="total-payable">₹0.00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>Made with ❤️ by AD</p>
+        </div>
+    </footer>
+    <script src="order-summary.js" type="module"></script>
+</body>
+</html> 

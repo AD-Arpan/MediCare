@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - MediCare</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Add styles for the signup page here */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--light-gray);
+      padding: 20px;
+    }
+
+    .signup-page-container {
+      display: flex;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* Ensure rounded corners are applied */
+      max-width: 700px; /* Adjust as needed */
+      width: 100%;
+    }
+
+    .image-container {
+      flex: 1; /* Allows the image container to grow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eef2ff; /* Light background for image */
+      padding: 10px; /* Further reduced padding */
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .signup-container {
+      padding: 1rem; /* Further reduced padding */
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      flex: 1; /* Allows the signup container to grow */
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      color: var(--text-color);
+      margin-bottom: 1rem; /* Reduced margin */
+    }
+
+    .form-group {
+      margin-bottom: 0.8rem; /* Reduced margin */
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    .required-star {
+      color: red;
+      margin-left: 5px;
+    }
+
+    .password-input-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .password-input-container input[type="password"],
+    .password-input-container input[type="text"] {
+      padding-right: 30px; /* Make space for the icon */
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #555; /* Adjust color as needed */
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem; /* Reduced padding */
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .sign-up-btn {
+      width: 100%;
+      padding: 0.5rem; /* Reduced padding */
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .sign-up-btn:hover {
+      background: var(--secondary-color);
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 1rem;
+      color: #666;
+    }
+
+    .form-footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="signup-page-container">
+    <div class="image-container">
+      <img src="pictures/signup page.png" alt="Healthcare Image">
+    </div>
+    <div class="signup-container">
+      <h2>Sign up</h2>
+      <form id="signUpForm">
+        <div class="form-group">
+          <label for="signup-name">Full Name<span class="required-star">*</span></label>
+          <input type="text" id="signup-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email<span class="required-star">*</span></label>
+          <input type="email" id="signup-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password<span class="required-star">*</span></label>
+          <div class="password-input-container">
+            <input type="password" id="signup-password" name="password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">
+              <i class="fas fa-eye-slash"></i>
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm-password">Confirm Password<span class="required-star">*</span></label>
+          <input type="password" id="signup-confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit" class="sign-up-btn">Sign up</button>
+        <p class="form-footer">
+          Already have an account? <a href="login.html" id="showSignIn">login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { authAPI } from './api.js';
+
+    function togglePasswordVisibility(fieldId) {
+      const field = document.getElementById(fieldId);
+      const icon = field.nextElementSibling.querySelector('i');
+      const fieldType = field.getAttribute('type');
+      if (fieldType === 'password') {
+        field.setAttribute('type', 'text');
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      } else {
+        field.setAttribute('type', 'password');
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      }
+    }
+
+    document.getElementById('signUpForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const username = document.getElementById('signup-name').value;
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-confirm-password').value;
+      
+      // Basic validation
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long!');
+        return;
+      }
+      
+      try {
+        // Make API call to backend
+        const data = await authAPI.signup({ name: username, email, password });
+      
+        if (data.success) {
+          // Store token and user data
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          // Redirect to home page
+          window.location.href = 'index.html';
+        } else {
+          alert(data.message || 'Signup failed');
+        }
+      } catch (error) {
+        console.error('Signup error:', error);
+        alert('An error occurred during signup.');
+      }
+    });
+  </script>
+</body>
+</html> 

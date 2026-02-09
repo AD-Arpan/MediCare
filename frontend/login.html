@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - MediCare</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f7f6; /* Light gray background */
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      padding-top: 0; /* Remove padding */
+    }
+
+    .auth-container {
+      background: white; /* White background */
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .auth-form h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: none;
+    }
+
+    .auth-form button[type="submit"] {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+      font-weight: normal;
+    }
+
+    .auth-form button[type="submit"]:hover {
+      background: var(--secondary-color);
+    }
+
+    .auth-link {
+      text-align: center;
+      margin-top: 1rem;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .auth-link a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.3s ease;
+    }
+
+    .auth-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      text-align: left;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <form id="signinForm" class="auth-form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+      <p class="auth-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+
+  <script type="module">
+    import { authAPI } from './api.js';
+
+    document.getElementById('signinForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await authAPI.login({ email, password });
+        if (response.success) {
+          // Store token
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('user', JSON.stringify(response.user));
+          // Redirect to home page
+          window.location.href = 'index.html';
+        } else {
+          alert(response.message || 'Sign in failed');
+        }
+      } catch (error) {
+        alert('Error logging in. Please try again.');
+        console.error('Login error:', error);
+      }
+    });
+  </script>
+</body>
+</html>

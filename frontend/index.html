@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Your Online Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-clinic-medical"></i>
+                <span>MediCare</span>
+            </div>
+            <div class="search-bar">
+                <div class="search-input">
+                    <input type="text" placeholder="Search for medicine & wellness products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="auth-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories-section">
+            <h2>Shop by Category</h2>
+            <div class="category-buttons">
+                <button class="category-btn" data-category="medicines">
+                    <i class="fas fa-pills"></i>
+                    <span>Medicines</span>
+                </button>
+                <button class="category-btn" data-category="healthcare">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Healthcare</span>
+                </button>
+                <button class="category-btn" data-category="wellness">
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                    <span>Wellness</span>
+                </button>
+                <button class="category-btn" data-category="personal-care">
+                    <i class="fas fa-spa"></i>
+                    <span>Personal Care</span>
+                </button>
+            </div>
+
+            <div class="category-content">
+                <div id="medicines" class="category-details">
+                    <h3>Medicines</h3>
+                    <div class="product-grid">
+                        <div class="product-card" data-product-id="aspirin-300">
+                            <img src="pictures/Aspirin.png" alt="Aspirin">
+                            <h3>Aspirin 300mg</h3>
+                            <p class="manufacturer">Mkt: Asoj Soft Caps Pvt Ltd</p>
+                            <div class="price">
+                                <span class="best-price">₹22</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+        
+                        <div class="product-card" data-product-id="paracetamol-500">
+                            <img src="pictures/Paracitamol.png" alt="Paracetamol">
+                            <h3>Paracetamol 500mg</h3>
+                            <p class="manufacturer">Mkt: Lyka Labs</p>
+                            <div class="price">
+                                <span class="best-price">₹350</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="volini-spray-100">
+                            <img src="pictures/voleni 100.png" alt="Volini Spray">
+                            <h3>Volini Spray 100gm</h3>
+                            <p class="manufacturer">Mkt: Sun Pharmaceutical</p>
+                            <div class="price">
+                                <span class="best-price">₹373</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+        
+                        <div class="product-card" data-product-id="vicks-vaporub-100">
+                            <img src="pictures/Vicks veporub.png" alt="Vicks Vaporub">
+                            <h3>Vicks Vaporub 100gm</h3>
+                            <p class="manufacturer">Mkt: Procter-gamble-hygiene limited</p>
+                            <div class="price">
+                                <span class="best-price">₹340</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="nise-100">
+                            <img src="pictures/Nise 100 Tablet 15's.png" alt="Nise Tablet">
+                            <h3>Nise 100 Tablet 15's</h3>
+                            <p class="manufacturer">Mkt: Dr.Reddy's</p>
+                            <div class="price">
+                                <span class="best-price">₹118</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="lanol-er">
+                            <img src="pictures/Lanol ER Tablet.png" alt="Lanol Tablet">
+                            <h3>Lanol ER Tablet</h3>
+                            <p class="manufacturer">Mkt: Methon Healthcare</p>
+                            <div class="price">
+                                <span class="best-price">₹20</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="carbimazol">
+                            <img src="pictures/thyroid.avif" alt="medicine">
+                            <h3>Carbimazol Tablets I.P. Neo Mercazole</h3>
+                            <p class="manufacturer">Mkt: Abbott</p>
+                            <div class="price">
+                                <span class="best-price">₹250</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="allen-wormicid">
+                            <img src="pictures/Allen Wormicid Tablet.png" alt="medicine">
+                            <h3>Allen Wormicid Tablet</h3>
+                            <p class="manufacturer">Mkt: ALLEN</p>
+                            <div class="price">
+                                <span class="best-price">₹175</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="gelusil">
+                            <img src="pictures/gelusil.webp" alt="medicine">
+                            <h3>Gelusil</h3>
+                            <p class="manufacturer">Mkt: Pfizer</p>
+                            <div class="price">
+                                <span class="best-price">₹23</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="honitus-syrup">
+                            <img src="pictures/Syrup.png" alt="Syrup">
+                            <h3>Dabur Honitus Syrup 4g</h3>
+                            <p class="manufacturer">Mkt: Dabur india limited</p>
+                            <div class="price">
+                                <span class="best-price">₹125</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="mefkind-spas">
+                            <img src="pictures/Mefkind-Spas Tablet 10's.png" alt="medicine">
+                            <h3>Mefkind-Spas Tablet 10's</h3>
+                            <p class="manufacturer">Mkt: LifeStar</p>
+                            <div class="price">
+                                <span class="best-price">₹48</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="lonitab">
+                            <img src="pictures/Lonitab 2.5 Tablet, 3 x 10 Tablets.png" alt="Lonitab Tablet">
+                            <h3>Lonitab 2.5 Tablet, 3 x 10 Tablets</h3>
+                            <p class="manufacturer">Mkt: Torrent Pharma</p>
+                            <div class="price">
+                                <span class="best-price">₹499</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="healthcare" class="category-details">
+                    <h3>Healthcare</h3>
+                    <div class="product-grid">
+                        <div class="product-card" data-product-id="digital-thermometer">
+                            <img src="pictures/Thermometer.png" alt="Thermometer">
+                            <h3>Digital Thermometer</h3>
+                            <p class="manufacturer">Mkt: Nureca Ltd.</p>
+                            <div class="price">
+                                <span class="best-price">₹300</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+                        
+                        <div class="product-card" data-product-id="weighing-scale">
+                            <img src="pictures/Digital Weighing Scale.png" alt="Personal Weighing Scale">
+                            <h3>Froskie Electronic Digital Personal Weighing Scale</h3>
+                            <p class="manufacturer">Mkt: Froskie(India)</p>
+                            <div class="price">
+                                <span class="best-price">₹600</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="first-aid-kit">
+                            <img src="pictures/First Aid Kit.png" alt="First Aid Kit">
+                            <h3>Comprehensive First Aid Kit</h3>
+                            <p class="manufacturer">Mkt: St.Johns First Aid Kits Pvt. Ltd.</p>
+                            <div class="price">
+                                <span class="best-price">₹14000</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+        
+                        <div class="product-card" data-product-id="boat-lunar-vista">
+                            <img src="pictures/smart watch.png" alt="Smartwatch">
+                            <h3>boAt Lunar Vista</h3>
+                            <p class="manufacturer">Mkt: Bright Beginings Pvt. Ltd.</p>
+                            <div class="price">
+                                <span class="best-price">₹2000</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="nebulizer-qa900">
+                            <img src="pictures/Nebulizer CORE (QA-900).png" alt="Nebulizer">
+                            <h3>Nebulizer CORE (QA-900)</h3>
+                            <p class="manufacturer">Mkt: Nureca Ltd.</p>
+                            <div class="price">
+                                <span class="best-price">₹1800</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="glucoone-monitor">
+                            <img src="pictures/glucometer.png" alt="Glucometer">
+                            <h3>DR.MOREPEN GlucoOne Blood Glucose Monitor</h3>
+                            <p class="manufacturer">Mkt: Morepen Laboratories Ltd.</p>
+                            <div class="price">
+                                <span class="best-price">₹400</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="blood-pressure-monitor">
+                            <img src="pictures/Blood Pressure Monitor.png" alt=" Blood Pressure Monitor">
+                            <h3> Digital Automatic Blood Pressure Monitor</h3>
+                            <p class="manufacturer">Mkt: Shikon Healthcare</p>
+                            <div class="price">
+                                <span class="best-price">₹1000</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wellness" class="category-details">
+                    <h3>Wellness</h3>
+                    <div class="product-grid">
+                        <div class="product-card" data-product-id="omega3-multivitamin">
+                            <img src="pictures/omega 3.png" alt="Multivitamin">
+                            <h3>Omega 3 + multi vitamins</h3>
+                            <p class="manufacturer">Mkt: Zinga Vita</p>
+                            <div class="price">
+                                <span class="best-price">₹1500</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="protein-powder">
+                            <img src="pictures/protein powder.png" alt="Supplements">
+                            <h3>Muscleblaze Biozyme Performance Whey</h3>
+                            <p class="manufacturer">Mkt: MUSCLEBLAZE</p>
+                            <div class="price">
+                                <span class="best-price">₹2250</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="tulsi-green-tea">
+                            <img src="pictures/herbal teas.png" alt="herbal tea">
+                            <h3>Tulsi Green Tea</h3>
+                            <p class="manufacturer">Mkt: ORGANIC INDIA</p>
+                            <div class="price">
+                                <span class="best-price">₹850</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="women-multivitamin">
+                            <img src="pictures/multi vitamin.png" alt="multivitamins">
+                            <h3>Multivitamin & Minerals For Women</h3>
+                            <p class="manufacturer">Mkt: Pure Nutrition TM.</p>
+                            <div class="price">
+                                <span class="best-price">₹1750</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="creatine-monohydrate">
+                            <img src="pictures/CREATINE.png" alt="supplement">
+                            <h3>Mcronised Creatine Monohydrate</h3>
+                            <p class="manufacturer">Mkt: Wellversed WELLCORE</p>
+                            <div class="price">
+                                <span class="best-price">₹1200</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="immunity-booster">
+                            <img src="pictures/immunity booster capsule.png" alt="multivitamins">
+                            <h3>Wow Immunity Booster Capsule</h3>
+                            <p class="manufacturer">Mkt: WoW Life Science</p>
+                            <div class="price">
+                                <span class="best-price">₹1600</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="personal-care" class="category-details">
+                    <h3>Personal Care</h3>
+                    <div class="product-grid">
+                        <div class="product-card" data-product-id="mamaearth-shampoo">
+                            <img src="pictures/mamaearth.avif" alt="Mamaearth Shampoo">
+                            <h3>Mamaearth Shampoo</h3>
+                            <p class="manufacturer">Mkt: Mamaearth TM</p>
+                            <div class="price">
+                                <span class="best-price">₹350</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="day-cream">
+                            <img src="pictures/day cream.jpg" alt="cream">
+                            <h3>DAY CREAM</h3>
+                            <p class="manufacturer">Mkt: HOMEO CARE CLINIC</p>
+                            <div class="price">
+                                <span class="best-price">₹300</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="joy-vitamin-c">
+                            <img src="pictures/joy.jpg" alt="cream">
+                            <h3>Joy Vitamin C</h3>
+                            <p class="manufacturer">Mkt: JOY</p>
+                            <div class="price">
+                                <span class="best-price">₹250</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="glodent-toothpaste">
+                            <img src="pictures/glodent.avif" alt="toothpaste">
+                            <h3>Glodent Toothpaste</h3>
+                            <p class="manufacturer">Mkt: Glodent</p>
+                            <div class="price">
+                                <span class="best-price">₹120</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="revel-shampoo">
+                            <img src="pictures/revel.jpg" alt="shampoo">
+                            <h3>REVEL Smooth & Shine</h3>
+                            <p class="manufacturer">Mkt: REVEL</p>
+                            <div class="price">
+                                <span class="best-price">₹220</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="pilgrim-shampoo">
+                            <img src="pictures/pilgrim.webp" alt="Pilgrim Shampoo">
+                            <h3>Pilgrim Smoothing Shampoo</h3>
+                            <p class="manufacturer">Mkt: Pilgrim</p>
+                            <div class="price">
+                                <span class="best-price">₹150</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="wow-yuzu">
+                            <img src="pictures/WOW.webp" alt="cream">
+                            <h3>WOW Science Yuzu + Vitamin C</h3>
+                            <p class="manufacturer">Mkt: WOW</p>
+                            <div class="price">
+                                <span class="best-price">₹700</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="tresemme-shampoo">
+                            <img src="pictures/Tresemme.avif" alt="shampoo">
+                            <h3>TRESemme Hair Fall Defense</h3>
+                            <p class="manufacturer">Mkt: TRESemme</p>
+                            <div class="price">
+                                <span class="best-price">₹323</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="sensodyne-toothpaste">
+                            <img src="pictures/sensodyne fresh mint toothpaste.avif" alt="toothpaste">
+                            <h3>Sensodyne Fresh Mint Toothpaste</h3>
+                            <p class="manufacturer">Mkt: Sensodyne</p>
+                            <div class="price">
+                                <span class="best-price">₹150</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="spark-toothbrush">
+                            <img src="pictures/eletric toothbrush.png" alt="toothbrush">
+                            <h3>Spark Electric Toothbrush</h3>
+                            <p class="manufacturer">Mkt: Colesmith</p>
+                            <div class="price">
+                                <span class="best-price">₹1400</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="oral-b-combo">
+                            <img src="pictures/oral combo.png" alt="Oral-B Combo">
+                            <h3>Oral-B Criss Cross Combo</h3>
+                            <p class="manufacturer">Mkt: Oral-B</p>
+                            <div class="price">
+                                <span class="best-price">₹387</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="colgate-toothbrush">
+                            <img src="pictures/colgate tooth.webp" alt="toothbrush">
+                            <h3>Colgate Extra Clean</h3>
+                            <p class="manufacturer">Mkt: Colgate</p>
+                            <div class="price">
+                                <span class="best-price">₹28</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="oral-b-cavity">
+                            <img src="pictures/oral-b tooth.jpg" alt="toothbrush">
+                            <h3>Oral-B Cavity Defense Toothbrush</h3>
+                            <p class="manufacturer">Mkt: Oral-B</p>
+                            <div class="price">
+                                <span class="best-price">₹230</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="oral-b-protect">
+                            <img src="pictures/oral-b.png" alt="Oral-B Toothpaste">
+                            <h3>Oral-B Protect & Clean</h3>
+                            <p class="manufacturer">Mkt: Oral-B</p>
+                            <div class="price">
+                                <span class="best-price">₹58</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="colgate-max-fresh">
+                            <img src="pictures/colgate.webp" alt="toothpast">
+                            <h3>Colgate Max Fresh</h3>
+                            <p class="manufacturer">Mkt:colgate</p>
+                            <div class="price">
+                                <span class="best-price">₹37</span>
+                            </div>
+                            <button class="add-to-cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>Made with ❤️ by AD</p>
+        </div>
+    </footer>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
