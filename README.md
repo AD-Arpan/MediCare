@@ -71,24 +71,20 @@ The server will start on http://localhost:3000.
 ```
 project/
 ├── backend/
-│   ├── controllers/     # Route logic (Auth, Products, Orders)
-│   ├── database/models/ # Mongoose schemas
-│   ├── middleware/      # Authentication middleware
-│   ├── routes/          # API routes
-│   ├── scripts/         # Database scripts
-│   └── server.js        # Entry point
-├── frontend/
-│   ├── pictures/        # Product images
-│   ├── api.js           # API integration layer
-│   ├── script.js        # Main frontend logic
-│   ├── styles.css       # Stylesheets
-│   ├── *.html           # HTML pages
-│   └── order-summary.js # Order management
-├── .env                 # Environment variables (Never commit this!)
-├── .env.example         # Environment template
-├── .gitignore           # Git ignore rules
-└── package.json         # Project dependencies
-```
+│   ├── controllers/    
+│   ├── database/models/
+│   ├── middleware/     
+│   ├── routes/          
+│   ├── scripts/         
+│   └── server.js       
+└── frontend/
+    ├── pictures/        
+    ├── api.js           
+    ├── script.js        
+    ├── styles.css       
+    ├── *.html           
+    └── order-summary.js 
+
 
 ## 👨‍💻 Author
-**Arpan Das**
+**Arpan**
