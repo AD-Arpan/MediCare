@@ -69,22 +69,21 @@ The server will start on http://localhost:3000.
 
 ## 📂 Project Structure
 ```
-project/
-├── backend/
-│   ├── controllers/    
-│   ├── database/models/
-│   ├── middleware/     
-│   ├── routes/          
-│   ├── scripts/         
+project
+├── backend
+│   ├── controllers    
+│   ├── database/models
+│   ├── middleware     
+│   ├── routes          
+│   ├── scripts        
 │   └── server.js       
-└── frontend/
-    ├── pictures/        
+└── frontend
+    ├── pictures        
     ├── api.js           
     ├── script.js        
     ├── styles.css       
     ├── *.html           
     └── order-summary.js 
-
 
 ## 👨‍💻 Author
 **Arpan**
