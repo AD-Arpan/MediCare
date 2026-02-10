@@ -75,7 +75,7 @@ project
     ├── api.js           
     ├── script.js        
     ├── styles.css       
-    ├── *.html           
+    ├── html           
     └── order-summary.js 
 
 ## 👨‍💻 Author
