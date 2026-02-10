@@ -16,7 +16,7 @@ A full-stack e-commerce pharmacy application that allows users to browse medicin
 * **Node.js & Express.js**
 * **MongoDB**
 * **JWT (JSON Web Tokens)**
-* **bcryptjs** 
+* **bcrypt.js** 
 
 ### Frontend
 * **HTML & CSS** 
@@ -77,6 +77,3 @@ project
     ├── styles.css       
     ├── html           
     └── order-summary.js 
-
-## 👨‍💻 Author
-**Arpan**
