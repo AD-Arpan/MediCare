@@ -1,6 +1,6 @@
 # Medicare Online Pharmacy
 
-A full-stack e-commerce pharmacy application that allows users to browse medicines, manage a shopping cart, and place orders. This project demonstrates a complete authentication flow, RESTful API development, and responsive frontend design.
+A full-stack e-commerce pharmacy application that allows users to browse medicines, manage a shopping cart, and place orders.
 
 ## Features
 
@@ -10,7 +10,7 @@ A full-stack e-commerce pharmacy application that allows users to browse medicin
 * **Order Management:** Place orders and view order history .
 * **Responsive Design:** Fully responsive UI built with CSS3 and Vanilla JavaScript.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 * **Node.js & Express.js**
@@ -22,7 +22,7 @@ A full-stack e-commerce pharmacy application that allows users to browse medicin
 * **HTML & CSS** 
 * **JS**
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 Follow these steps to run the project locally.
 
@@ -60,7 +60,7 @@ npm start
 
 The server will start on http://localhost:3000.
 
-## 📂 Project Structure
+## Project Structure
 ```
 project
 ├── backend
