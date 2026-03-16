@@ -1,8 +1,8 @@
-# Medicare Online Pharmacy 💊
+# Medicare Online Pharmacy
 
 A full-stack e-commerce pharmacy application that allows users to browse medicines, manage a shopping cart, and place orders. This project demonstrates a complete authentication flow, RESTful API development, and responsive frontend design.
 
-## 🚀 Features
+## Features
 
 * **User Authentication:** Secure signup and login using JWT and bcrypt for password hashing.
 * **Product Catalog:** Browse pharmaceutical products with categorization.
@@ -37,7 +37,7 @@ cd medicare-pharmacy
 npm install
 ```
 
-### 3. Environment Configuration (Crucial!) 🔒
+### 3. Environment Configuration
 This project uses environment variables to secure sensitive data (MongoDB URI, JWT Secret).
 
 Create a new file named `.env` in the root directory.
