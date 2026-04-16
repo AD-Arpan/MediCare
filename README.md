@@ -1,6 +1,6 @@
 # Medicare Online Pharmacy
 
-A full-stack e-commerce pharmacy application that allows users to browse medicines, manage a shopping cart, and place orders.
+A full-stack e-commerce pharmacy application that allows users to browse medicines, manage a shopping cart and place orders.
 
 ## Features
 
